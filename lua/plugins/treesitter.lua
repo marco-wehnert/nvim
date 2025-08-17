@@ -11,6 +11,7 @@ return {
 	    autotage = { enable = true },
 	    ensure_installed = {
 		"dockerfile",
+		-- "latex",
 		"lua",
 		"markdown",
 		"python",
