@@ -17,7 +17,7 @@ return {
 		"python",
 		"yaml",
 	    },
-	    auto_install = false,
+	    auto_install = true,
 	})
     end
 }

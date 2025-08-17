@@ -2,15 +2,4 @@
 require("config.options")
 require("config.keybinds")
 require("config.lazy")
--- vim.cmd("set expandtab")
--- vim.cmd("set tabstop=4")
--- vim.cmd("set softtabstop=4")
--- vim.cmd("set shiftwidth=4")
--- vim.cmd("nnoremap <C-J> <C-W><C-J>")
--- vim.cmd("nnoremap <C-K> <C-W><C-K>")
--- vim.cmd("nnoremap <C-H> <C-W><C-H>")
--- vim.cmd("nnoremap <C-L> <C-W><C-L>")
--- vim.cmd("set number")
--- vim.cmd("set relativenumber")
--- vim.cmd("set cc=80")
--- 
+
