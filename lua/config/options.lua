@@ -7,7 +7,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.cc = { 80 }
+vim.opt.cc = { 72, 80 }
 vim.opt.wrap = false
 vim.opt.mouse = ""
 

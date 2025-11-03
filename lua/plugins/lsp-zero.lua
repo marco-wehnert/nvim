@@ -42,6 +42,29 @@ return {
 			})
 
 			local lsp = require("lsp-zero").preset({})
+
+            lsp.on_attach(function(client, bufnr)
+                local opts = { buffer = bufnr, noremap = true, silent = true }
+
+                -- Standard LSP keymaps
+                vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+                vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+                vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+                vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+                vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+                -- TODO: find a new keybind to show signature help
+                vim.keymap.set("n", "gk", vim.lsp.buf.signature_help, opts)
+            end)
+
+            -- Hover popup with rounded border
+            vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+                vim.lsp.handlers.hover,
+                { border = "rounded" }
+            )
+
+
+
+
 			lsp.ensure_installed({
 				"lua_ls",
 				"pyright",
