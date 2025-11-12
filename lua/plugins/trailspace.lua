@@ -11,7 +11,10 @@ return {
     -- (Optional) Auto-trim trailing spaces on save
     vim.api.nvim_create_autocmd("BufWritePre", {
       callback = function()
-        require("mini.trailspace").trim()
+        local filename = vim.api.nvim_buf_get_name(0)
+        if not filename:match("task%.[%w%d]+%.task$") then
+          require("mini.trailspace").trim()
+        end
       end,
     })
   end,
