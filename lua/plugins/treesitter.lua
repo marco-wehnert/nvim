@@ -1,13 +1,13 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     branch = "master",
-    lazy = false,
+    lazy = false, -- Load plugin immediately
     build = ":TSUpdate",
 --    config = function()
 --	local configs = require("nvim-treesitter.configs")
 --	configs.setup({
 --	    highlight = {
---		enable = true,
+--    		enable = true,
 --	    },
 --	    indent = { enable = true },
 --	    autotage = { enable = true },

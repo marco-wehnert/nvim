@@ -23,7 +23,5 @@ vim.keymap.set("n", "<leader>nt", ":Neotree show<CR>", { noremap = true, silent 
 vim.keymap.set("n", "<leader>cm", ":CopyMode<CR>", { noremap = true, silent = true })
 
 -- Open lazygit
-vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover({ border = 'rounded' })<CR>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { noremap = true, silent = true })
 
