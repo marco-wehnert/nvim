@@ -1,4 +1,4 @@
--- To show all keybinds:
+-- To show all keymaps:
 -- :Telescope keymaps
 vim.g.mapleader = " "
 
@@ -25,3 +25,6 @@ vim.keymap.set("n", "<leader>cm", ":CopyMode<CR>", { noremap = true, silent = tr
 -- Open lazygit
 -- vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { noremap = true, silent = true })
 
+-- LSP keymaps
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show documentation" })
+-- vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help, { desc = "Show signature help" })
