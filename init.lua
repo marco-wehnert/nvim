@@ -30,13 +30,13 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable('lua_ls')
 
 -- LSP for Python -----------------------------------------------------
--- local cmp_nvim_lsp = require("cmp_nvim_lsp")
--- local capabilities = cmp_nvim_lsp.default_capabilities()
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+local capabilities = cmp_nvim_lsp.default_capabilities()
 vim.lsp.config("pyright", {
   cmd = { "pyright-langserver", "--stdio" },
   filetypes = { "python" },
   root_markers = { "pyproject.toml", "setup.py", ".git" },
---  capabilities = capabilities,
+  capabilities = capabilities,
 })
 
 vim.lsp.enable('pyright')
