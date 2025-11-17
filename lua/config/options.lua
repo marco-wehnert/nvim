@@ -2,6 +2,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.number = true
 vim.opt.relativenumber = true
+--vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 vim.opt.expandtab = true    -- insert spaces, not tabs
 vim.opt.tabstop = 4         -- a real tab char counts 4 spaces
