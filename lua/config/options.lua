@@ -13,24 +13,24 @@ vim.opt.mouse = ""
 
 local plain = false
 vim.api.nvim_create_user_command("CopyMode", function()
-    plain = not plain
-    local gitsigns = package.loaded["gitsigns"]
-    if plain then
-        vim.opt.number = false
-        vim.opt.relativenumber = false
-        vim.opt.signcolumn = "no"
-        if gitsigns then
-            gitsigns_enabled = true
-            gitsigns.toggle_signs(false)
-        else
-            gitsigns_enabled = false
-        end
+  plain = not plain
+  local gitsigns = package.loaded["gitsigns"]
+  if plain then
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+    vim.opt.signcolumn = "no"
+    if gitsigns then
+      gitsigns_enabled = true
+      gitsigns.toggle_signs(false)
     else
-        vim.opt.number = true
-        vim.opt.relativenumber = true
-        vim.opt.signcolumn = "yes"
-        if gitsigns and gitsigns_enabled then
-            gitsigns.toggle_signs(true)
-        end
+      gitsigns_enabled = false
     end
+  else
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+    vim.opt.signcolumn = "yes"
+    if gitsigns and gitsigns_enabled then
+      gitsigns.toggle_signs(true)
+    end
+  end
 end, {})
